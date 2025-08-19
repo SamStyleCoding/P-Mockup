@@ -1,9 +1,9 @@
 import './Button.scss'
 
-export default function Button({text}) {
+export default function Button({text, color}) {
   return (
-	<div>
-	  <button className="cta-btn">{text}</button>
-	</div>
+	<button className="cta-btn" style={{ backgroundColor: color}}>
+		{text}
+	</button>
   )
 }
