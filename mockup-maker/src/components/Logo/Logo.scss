@@ -1,0 +1,27 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+  img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .logo-placeholder {
+    width: 150px;
+    height: 80px;
+    background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6b7280;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+}

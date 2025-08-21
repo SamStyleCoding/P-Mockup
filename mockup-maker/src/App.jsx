@@ -2,6 +2,10 @@ import Button from './components/Button/Button';
 import { parsePrompt } from './Parser';
 import './App.scss';
 import { useState } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Products from './components/Products/Products';
+import Chat from './components/Chat/Chat';
+import Title from './components/Title/Title';
 
 
 export default function App() {
@@ -61,9 +65,13 @@ export default function App() {
       <div className="previews">
         {
         configs.map((config, i) => (
-          <div className="preview" key={i}>
+          <div className="preview" key={i} style={{ '--primary-color': config.primary }}>
+            {config.wants.navbar && <Navbar showLogo={config.wants.logo} logoSrc="logo.png" />}
+            {config.wants.title && <Title title={config.title} />}
+            {config.wants.products && <Products />}
+            {config.wants.chat && <Chat />}
             {config.wants.button && (
-              <Button text="Commander maintenant" color={config.primary} />
+              <Button text="Commander maintenant"/>
             )}
           </div>
         ))

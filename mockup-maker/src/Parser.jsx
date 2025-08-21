@@ -7,6 +7,11 @@ function includesAny(keywords) {
 }
 
 const wants = {
+	navbar: includesAny(['nav','navbar','navigation']),
+	logo: includesAny(['logo', 'branding', 'logo de l’entreprise']),
+	title: includesAny(['accueil','landing', 'title']),
+	products: includesAny(['product','boutique','shop', 'shopping']),
+	chat: includesAny(['chat','message','conversation']),
 	button: includesAny(['button','commander','acheter'])
 };
 
@@ -23,6 +28,13 @@ if (foundColor) {
   primary = colors[foundColor]; 
 }
 
-return { wants, primary };
+let title = 'Mon application';
+if (text.includes("title ")) { 
+	title = text.split("title ")[1] || title; 
+} else if (text.includes("nom ")) { 
+	title = text.split("nom ")[1] || title; 
+}
+
+return { wants, primary, title };
 
 }
