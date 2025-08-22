@@ -6,6 +6,9 @@ import Navbar from './components/Navbar/Navbar';
 import Products from './components/Products/Products';
 import Chat from './components/Chat/Chat';
 import Title from './components/Title/Title';
+import Form from './components/Form/Form';
+import FoodMenu from './components/FoodMenu/FoodMenu';
+import Footer from './components/Footer/Footer';
 
 
 export default function App() {
@@ -69,10 +72,15 @@ export default function App() {
             {config.wants.navbar && <Navbar showLogo={config.wants.logo} logoSrc="logo.png" />}
             {config.wants.title && <Title title={config.title} />}
             {config.wants.products && <Products />}
+            {config.wants.foodMenu && (
+              <FoodMenu items={['Pizza', 'Burger', 'Salade', 'Pâtes']} />
+            )}
             {config.wants.chat && <Chat />}
+            {config.wants.form && <Form/>}
             {config.wants.button && (
               <Button text="Commander maintenant"/>
             )}
+            {config.wants.footer && <Footer/>}
           </div>
         ))
         }

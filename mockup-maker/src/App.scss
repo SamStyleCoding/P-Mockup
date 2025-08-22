@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(120deg, #fdfbfb, #ebedee);
 }
 
 .app {
@@ -10,6 +11,9 @@ body {
   h1 {
     text-align: center;
     margin-bottom: 1rem;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   textarea {
@@ -21,9 +25,14 @@ body {
     margin-bottom: 1rem;
     margin-left: -0.5rem;
     padding: 0.5rem;
-      @media screen and (max-width: 768px) {
-        margin: 0.5rem 0 0.5rem -0.5rem;
+      &:focus {
+        outline: none;
+        border-color: #ff6a00;
+        box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
       }
+        @media screen and (max-width: 768px) {
+          margin: 0.5rem 0 0.5rem -0.5rem;
+        }
   }
 
   .buttons {
@@ -37,7 +46,7 @@ body {
 
     button {
       padding: 0.5rem 1rem;
-      background-color: var(--primary-color, #5b8def);
+      background: linear-gradient(45deg, #ff6a00, #ee0979);;
       border: none;
       color: white;
       cursor: pointer;

@@ -12,7 +12,10 @@ const wants = {
 	title: includesAny(['accueil','landing', 'title']),
 	products: includesAny(['product','boutique','shop', 'shopping']),
 	chat: includesAny(['chat','message','conversation']),
-	button: includesAny(['button','commander','acheter'])
+	button: includesAny(['button','commander','acheter']),
+	form: includesAny(['form','formulaire','contact','contactez','contactez-nous','formulaire de contact']),
+	foodMenu: includesAny(['menu', 'plat', 'repas', 'food', 'restaurant']),
+	footer: includesAny(['footer', 'bas de page', 'copyright'])
 };
 
 const colors = {
