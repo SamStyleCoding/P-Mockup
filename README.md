@@ -13,25 +13,6 @@ Elle permet de transformer une description textuelle en une maquette interactive
  • 🎨 Chaque composant possède son propre fichier SCSS.
 
 
-Structure du projet :
-
-src/
- ├── components/
- │    ├── Navbar/
- │    │    ├── Navbar.jsx
- │    │    └── Navbar.scss
- │    ├── Bouton/
- │    │    ├── Bouton.jsx
- │    │    └── Bouton.scss
- │    ├── Formulaire/
- │    │    ├── Formulaire.jsx
- │    │    └── Formulaire.scss
- │    └── ...
- ├── parser.js   # Analyse du texte utilisateur
- ├── App.jsx     # Interface principale
- └── index.js
-
-
 🚀 Utilisation : 
 
 1. Lancer l’application en mode développement :
